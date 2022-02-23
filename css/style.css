@@ -1,0 +1,144 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    /* Colors */
+    --primary-one: hsl(193, 38%, 86%);
+    --primary-two: rgb(82, 255, 168);
+    --neutral-one: hsl(217, 19%, 38%);
+    --neutral-two: hsl(217, 19%, 24%);
+    --neutral-three: #202531;
+
+    /* Device sizes */
+
+    /* 
+    320px — 480px: Mobile devices
+    481px — 768px: iPads, Tablets
+    769px — 1024px: Small screens, laptops
+    1025px — 1200px: Desktops, large screens
+    1201px and more —  Extra large screens, TV 
+    */
+
+    --xxs: 320px;
+    --xs: 481px;
+    --sm: 769px;
+    --md: 1025px;
+    --lg: 1201px; 
+
+}
+
+html{
+    font-family: 'Manrope', sans-serif;
+    font-size: 10px;
+    font-weight: 800;
+}
+
+body{
+    background-color: var(--neutral-three);
+    height: 100vh;    
+}
+
+main{
+    height: 90%; 
+}
+
+main,
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section{
+    background-color: var(--neutral-two);
+    width: 340px;
+    height: auto;
+    text-align: center; 
+    padding: 18px;   
+    padding-bottom: 30px;
+    border-radius: 15px;
+}
+
+section p{
+    color: var(--primary-two);
+    margin: 25px 0;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    position: relative;
+}
+
+h1{
+    color: var(--primary-one);
+    font-size: 2.2rem;
+}
+
+section>img{
+    margin: 25px 0;
+}
+
+img.divider-mobile{
+    display: inline;
+}
+img.divider-desktop{
+    display: none;
+} 
+
+button{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: none;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    background-color: var(--primary-two);
+    transition: all .2s;
+}
+
+footer{
+    height: 10%;    
+}
+
+footer p{
+    color: var(--neutral-one);
+}
+
+footer a{
+    text-decoration: none;
+    font-weight: 800;
+    color: var(--primary-one);    
+}
+
+@media (min-width: 1201px) {
+    section{
+        width: 35%;
+        padding: 15px 40px; 
+        padding-bottom: 30px;
+    }
+
+    img.divider-mobile{
+        display: none;
+    }
+    img.divider-desktop{
+        display: inline;
+        width: 100%;
+    } 
+
+    button:hover{
+        cursor: pointer;
+        /* box-shadow: 'desplazamiento horizontal' 'desplazamiento vertical' 'desenfoque' 'extension' 'color' inset; */
+        box-shadow: 0 0 17px 12px rgba(82, 255, 168, .3) ;
+        transform: rotate(0.5turn)
+    }
+}
+
+
+
